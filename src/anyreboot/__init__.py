@@ -4,7 +4,7 @@ import jinja2
 
 
 def render_template():
-    with open("main.go.tmpl", "r") as file:
+    with open("main.txt", "r") as file:
         template_content = file.read()
 
     env = jinja2.Environment(loader=jinja2.BaseLoader())
