@@ -1,4 +1,5 @@
-import anyreboot
 import sys
+
+import anyreboot
 
 sys.exit(anyreboot.main())
