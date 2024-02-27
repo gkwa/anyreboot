@@ -1,10 +1,18 @@
+import pathlib
 import sys
 
 import jinja2
+import pkg_resources
 
 
 def render_template():
-    with open("main.txt", "r") as file:
+    package = __name__.split(".")[0]
+    TEMPLATES_PATH = pathlib.Path(
+        pkg_resources.resource_filename(package, "templates/")
+    )
+    path = TEMPLATES_PATH / "main.txt"
+
+    with open(path, "r") as file:
         template_content = file.read()
 
     env = jinja2.Environment(loader=jinja2.BaseLoader())
