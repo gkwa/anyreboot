@@ -23,6 +23,6 @@ def render_template(template_content):
 
 
 def main() -> int:
-    template_content = load_template("main.go.tmpl")
+    template_content = load_template("mymain.tmpl")
     render_template(template_content)
     return 0
