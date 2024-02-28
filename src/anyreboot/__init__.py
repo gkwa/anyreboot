@@ -10,7 +10,7 @@ def render_template():
     TEMPLATES_PATH = pathlib.Path(
         pkg_resources.resource_filename(package, "templates/")
     )
-    path = TEMPLATES_PATH / "main.txt"
+    path = TEMPLATES_PATH / "main.go.tmpl"
 
     with open(path, "r") as file:
         template_content = file.read()
