@@ -15,7 +15,5 @@ I like how how few files I need to install a script.
 Taking rye for a spin
 
 ```bash
-docker run --rm -ti python bash
-pip install git+https://github.com/taylormonacelli/anyreboot
-hello
+docker run --rm -ti python bash -c 'pip install git+https://github.com/taylormonacelli/anyreboot && find /usr/local/lib/python3.12/site-packages/anyreboot -name mymain.tmpl && hello'
 ```
